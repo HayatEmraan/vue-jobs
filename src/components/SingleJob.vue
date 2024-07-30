@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import { RouterLink } from "vue-router";
+
 const props = defineProps({
   jd: Object,
 });
@@ -7,7 +9,7 @@ const props = defineProps({
 const showRef = ref(false);
 
 const truncateDesc = computed(() => {
-  let desc = props.jd.description;
+  let desc = props?.jd?.description;
   if (!showRef.value) {
     desc = desc.substring(0, 90) + "...";
   }
@@ -36,14 +38,14 @@ const truncateDesc = computed(() => {
 
       <div class="flex flex-col lg:flex-row justify-between mb-4">
         <div class="text-orange-700 mb-3">
-          <i class="pi pi-map-marker "></i>
+          <i class="pi pi-map-marker"></i>
           {{ jd?.location }}
         </div>
-        <a
-          href="job.html"
+        <RouterLink
+          :to="`/jobs/${props?.jd?.id}`"
           class="h-[36px] bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-center text-sm">
           Read More
-        </a>
+        </RouterLink>
       </div>
     </div>
   </div>
