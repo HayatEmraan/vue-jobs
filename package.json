@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.31"
+    "primeicons": "^7.0.0",
+    "vue": "^3.4.31",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
