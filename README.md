@@ -13,7 +13,7 @@ This project uses JSON-Server for a mock backend.
 ### Install Dependencies
 
 ```bash
-npm install
+yarn
 ```
 
 ### Run JSON Server
@@ -21,7 +21,7 @@ npm install
 The server will run on http://localhost:8000
 
 ```bash
-npm run server
+yarn server
 ```
 
 ### Run Vite Frontend
@@ -29,17 +29,17 @@ npm run server
 Vue will run on http://localhost:3000
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ### Build for Production
 
 ```bash
-npm run build
+yarn build
 ```
 
 ### Preview Production Build
 
 ```bash
-npm run preview
+yarn preview
 ```
